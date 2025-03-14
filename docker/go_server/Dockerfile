@@ -1,6 +1,6 @@
 FROM debian:stable-slim
 
 # COPY source destination
-COPY goserver /bin/goserver
+COPY go_server /bin/goserver
 
 CMD ["/bin/goserver"]
