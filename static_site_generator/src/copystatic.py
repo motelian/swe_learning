@@ -19,8 +19,3 @@ def recursive_copy(source_dir_path, dest_dir_path):
             shutil.copy(from_path, dest_path)
         else:
             recursive_copy(from_path, dest_path)
-
-if __name__ == "__main__":
-    source = "./static"
-    dest = "./public"
-    recursive_copy(source, dest)

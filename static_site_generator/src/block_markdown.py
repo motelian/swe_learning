@@ -68,6 +68,12 @@ def markdown_to_html_node(markdown):
             )
     return ParentNode("div", html_body_nodes)
 
+def extract_title(markdown):
+    lines = markdown.split("\n")
+    for line in lines:
+        if line.startswith("#"):
+            return line[1:].strip()
+    raise Exception("title not found")
 
 def text_to_children(text):
     textnodes = text_to_textnodes(text)
